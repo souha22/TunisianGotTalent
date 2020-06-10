@@ -30,6 +30,10 @@ public class Reclamation implements java.io.Serializable {
 		this.detailReclamation = detailReclamation;
 	}
 
+    public Reclamation(double aDouble, Utilisateur utilisateur, String string, String string0, String string1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 	// Property accessors
 	
 	public Double getIdReclamation() {

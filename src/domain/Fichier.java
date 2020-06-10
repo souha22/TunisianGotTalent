@@ -10,7 +10,7 @@ import java.util.Set;
 public class Fichier implements java.io.Serializable {
 
 	// Fields
-
+        private String test;
 	private Double idFichier;
 	private Utilisateur utilisateur;
 	private String taille;
