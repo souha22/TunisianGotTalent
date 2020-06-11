@@ -16,6 +16,7 @@ public class Fichier implements java.io.Serializable {
 	private String taille;
 	private String type;
 	private Date date;
+        private String url;
 	private Set<Vote> votes = new HashSet<Vote>(0);
 
 	// Constructors
