@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 public class DataSource {
       //API JDBC = JAVA DATA BASE CONNECTIVITY
-    private String url="jdbc:mysql://127.0.0.1:3306/tgt";
+    private String url="jdbc:mysql://127.0.0.1:3308/tgt?useSSL=false";
     private String login="root";
     private String password="";
     
@@ -22,15 +22,16 @@ public class DataSource {
   //Singleton
     private static DataSource instance;
           
-    private DataSource() {
+    private DataSource() throws ClassNotFoundException {
         try {
+//            Class.forName("com.mysql.jdbc.Driver");
             cnx=DriverManager.getConnection(url, login, password);
         } catch (SQLException ex) {
             Logger.getLogger(DataSource.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public static DataSource getInstance(){
+    public static DataSource getInstance() throws ClassNotFoundException{
         if(instance==null)
             instance=new DataSource();
         return instance;

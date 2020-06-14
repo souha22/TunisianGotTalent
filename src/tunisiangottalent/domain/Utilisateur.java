@@ -1,8 +1,6 @@
 package tunisiangottalent.domain;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+
 
 
 
@@ -10,152 +8,135 @@ public class Utilisateur {
 
 	// Fields
 
-	protected Double idUtilisateur;
+	protected int id;
 	protected String nom;
 	protected String prenom;
 	protected String cin;
-	protected String profession;
 	protected String mail;
 	protected String adresse;
 	protected String tel;
 	protected String sexe;
-	protected String type;
-	protected String talent;
 	protected String password;
-	protected Date dateNaissance;
-	
-	// Constructors
+        protected String type;
 
-	/** default constructor */
-	public Utilisateur() {
-	}
+    public Utilisateur() {
+    }
 
-	/** minimal constructor */
-	public Utilisateur(Double idUtilisateur, String nom, String prenom,
-			String cin, String profession, String mail, String sexe,
-			String type, String talent, String password, Date dateNaissance) {
-            
-		this.idUtilisateur = idUtilisateur;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.cin = cin;
-		this.profession = profession;
-		this.mail = mail;
-		this.sexe = sexe;
-		this.type = type;
-		this.talent = talent;
-		this.password = password;
-		this.dateNaissance = dateNaissance;
-	}
+    public Utilisateur(int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.cin = cin;
+        this.mail = mail;
+        this.adresse = adresse;
+        this.tel = tel;
+        this.sexe = sexe;
+        this.password = password;
+        this.type = type;
+    }
 
-	
+    public Utilisateur(String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.cin = cin;
+        this.mail = mail;
+        this.adresse = adresse;
+        this.tel = tel;
+        this.sexe = sexe;
+        this.password = password;
+        this.type = type;
+    }
 
-	// Property accessors
-	 
-	public Double getIdUtilisateur() {
-		return this.idUtilisateur;
-	}
+    
+    
+    
 
-	public void setIdUtilisateur(Double idUtilisateur) {
-		this.idUtilisateur = idUtilisateur;
-	}
+    public int getId() {
+        return id;
+    }
 
- 	public String getNom() {
-		return this.nom;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
+    public String getNom() {
+        return nom;
+    }
 
- 	public String getPrenom() {
-		return this.prenom;
-	}
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+    public String getPrenom() {
+        return prenom;
+    }
 
- 	public String getCin() {
-		return this.cin;
-	}
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
 
-	public void setCin(String cin) {
-		this.cin = cin;
-	}
+    public String getCin() {
+        return cin;
+    }
 
- 	public String getProfession() {
-		return this.profession;
-	}
+    public void setCin(String cin) {
+        this.cin = cin;
+    }
 
-	public void setProfession(String profession) {
-		this.profession = profession;
-	}
+    public String getMail() {
+        return mail;
+    }
 
- 	public String getMail() {
-		return this.mail;
-	}
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
+    public String getAdresse() {
+        return adresse;
+    }
 
- 	public String getAdresse() {
-		return this.adresse;
-	}
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
 
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
-	}
+    public String getTel() {
+        return tel;
+    }
 
- 	public String getTel() {
-		return this.tel;
-	}
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
+    public String getSexe() {
+        return sexe;
+    }
 
- 	public String getSexe() {
-		return this.sexe;
-	}
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
 
-	public void setSexe(String sexe) {
-		this.sexe = sexe;
-	}
+    public String getPassword() {
+        return password;
+    }
 
- 	public String getType() {
-		return this.type;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    public String getType() {
+        return type;
+    }
 
- 	public String getTalent() {
-		return this.talent;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
 
-	public void setTalent(String talent) {
-		this.talent = talent;
-	}
+    @Override
+    public String toString() {
+        return "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", mail=" + mail + ", adresse=" + adresse + ", tel=" + tel + ", sexe=" + sexe + ", password=" + password + ", type=" + type;
+    }
 
- 	public String getPassword() {
-		return this.password;
-	}
+    
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
- 	public Date getDateNaissance() {
-		return this.dateNaissance;
-	}
-
-	public void setDateNaissance(Date dateNaissance) {
-		this.dateNaissance = dateNaissance;
-	}
-
-
-
+   
 }

@@ -5,6 +5,7 @@
  */
 package tunisiangottalent.domain;
 
+import tunisiangottalent.domain.Utilisateur;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,27 +16,32 @@ import java.util.Date;
 public class Candidat extends Utilisateur{
     private Date dateNaissance;
     private String talent;
-    private String sexe;
+  
 
     public Candidat() {
         super();
     }
 
-    public Candidat(Date dateNaissance, String talent, String sexe, Double id, String nom, String prenom, String cin, String mail, String adresse, String tel, String password) {
-        super(id, nom, prenom, cin, mail, adresse, tel, password);
+    public Candidat(Date dateNaissance, String talent, int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+        super(id, nom, prenom, cin, mail, adresse, tel, sexe, password, type);
         this.dateNaissance = dateNaissance;
         this.talent = talent;
-        this.sexe = sexe;
     }
+
+    public Candidat(Date dateNaissance, String talent, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+        super(nom, prenom, cin, mail, adresse, tel, sexe, password, type);
+        this.dateNaissance = dateNaissance;
+        this.talent = talent;
+    }
+
+   
+    
 
     public Date getDateNaissance() {
         return dateNaissance;
     }
 
     public void setDateNaissance(Date dateNaissance) {
-        Calendar calendar = Calendar.getInstance();
-        if ( calendar.get( Calendar.MONTH )==Calendar.JANUARY ) { 
-        ystem.out.prinln("la date courante est en janvier"); }
         this.dateNaissance = dateNaissance;
     }
 
@@ -47,22 +53,10 @@ public class Candidat extends Utilisateur{
         this.talent = talent;
     }
 
-    public String getSexe() {
-        return sexe;
-    }
-
-    public void setSexe(String sexe) {
-        this.sexe = sexe;
-    }
-
-    @Override
+      @Override
     public String toString() {
-        return "Candidat : " +super.toString()+ " dateNaissance=" + dateNaissance + ", talent=" + talent + ", sexe=" + sexe + '}';
+        return "Candidat " + super.toString() + "Date de naissance  : " + dateNaissance+ " Talent : " +talent;
+    
     }
 
-    
-
-    
-    
-
-}
+} 

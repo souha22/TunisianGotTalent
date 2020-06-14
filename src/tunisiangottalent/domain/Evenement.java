@@ -18,8 +18,8 @@ public class Evenement  {
 	private Date dateFin;
 	private int idOrganisateur;
 	private Set<Spectateur> Spectateur = new HashSet<Spectateur>(0);
-        private Set<Candidat> Candidat = new Hashset<Candidat> (0);
-        private Set<Jury> Jury = new Hashset <Jury> (0);
+        private Set<Candidat> Candidat;
+        private Set<Jury> Jury;
         
         
 
@@ -27,11 +27,15 @@ public class Evenement  {
 
 	/** default constructor */
 	public Evenement() {
+        this.Jury = new Hashset <>();
+        this.Candidat = new Hashset<>();
 	}
 
 	/** minimal constructor */
 	public Evenement(int idEv, String libelle, String lieu,
 			Date dateDebut, Date dateFin, Double idOrganisateur) {
+        this.Jury = new Hashset <Jury>(0);
+        this.Candidat = new Hashset<Candidat>(0);
 		this.idEv = idEv;
 		this.libelle = libelle;
 		this.lieu = lieu;
@@ -44,6 +48,8 @@ public class Evenement  {
 	public Evenement(Double idEv, String libelle, String lieu,
 			Date dateDebut, Date dateFin, Double idOrganisateur,
 			Set<Utilisateur> utilisateurs) {
+        this.Jury = new Hashset <Jury>(0);
+        this.Candidat = new Hashset<Candidat>(0);
 		this.idEv = idEv;
 		this.libelle = libelle;
 		this.lieu = lieu;
@@ -108,13 +114,4 @@ public class Evenement  {
 	public void setIdOrganisateur(Double idOrganisateur) {
 		this.idOrganisateur = idOrganisateur;
 	}
-
-	public Set<Utilisateur> getUtilisateurs() {
-		return this.utilisateurs;
-	}
-
-	public void setUtilisateurs(Set<Utilisateur> utilisateurs) {
-		this.utilisateurs = utilisateurs;
-	}
-
 }
