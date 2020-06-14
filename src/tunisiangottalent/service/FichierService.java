@@ -21,7 +21,7 @@ import utils.DataSource;
  *
  * @author admin
  */
-public class FichierService implements InterfaceService{
+public class FichierService{
         
           private Connection conn;
           private Statement ste;
@@ -50,40 +50,41 @@ public class FichierService implements InterfaceService{
        
     }
 
-    @Override
-    public void Supprimer(Object o) {
-       String req = "delete from randonnee where id_randonnee=" + r.getIdRandonnee();
-        Randonnee ra = displayById(r.getIdRandonnee());
-
-        if (ra != null) {
-            try {
-
-                st.executeUpdate(req);
-
-            } catch (SQLException ex) {
-                Logger.getLogger(RandonneeService.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } else {
-            System.out.println("n'existe pas");
-        }   
-    }
-    @Override
+  
+//    public void Supprimer(Object o) {
+//       String req = "delete from randonnee where id_randonnee=" + r.getIdRandonnee();
+//        Randonnee ra = displayById(r.getIdRandonnee());
+//
+//        if (ra != null) {
+//            try {
+//
+//                st.executeUpdate(req);
+//
+//            } catch (SQLException ex) {
+//                Logger.getLogger(RandonneeService.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        } else {
+//            System.out.println("n'existe pas");
+//        }   
+//    }
+ 
     public List Afficher() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
+  
     public Object AfficherparId(int id) {
+              return null;
         
        
     }
 
-    @Override
+   
     public boolean Modifier(Object os) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
+    
     public void Ajouter(Object o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

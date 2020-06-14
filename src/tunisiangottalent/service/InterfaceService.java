@@ -6,7 +6,6 @@
 package tunisiangottalent.service;
 
 import java.util.List;
-import gestionrandonnees.entities.Randonneur;
 import java.util.List;
 import javafx.collections.ObservableList;
 
@@ -20,7 +19,7 @@ public interface InterfaceService<T> {
 
 /**
  *
- * @author Raouf
+ * @
  * @param <T>
  */
     public void Ajouter(T o);

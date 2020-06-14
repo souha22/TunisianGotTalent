@@ -21,7 +21,7 @@ public class ReclamationServiceImpl implements ReclamationService {
     private PreparedStatement pst;
     private ResultSet rs;
 
-    public ReclamationServiceImpl() {
+    public ReclamationServiceImpl() throws ClassNotFoundException {
         conn = DataSource.getInstance().getCnx();
     }
 
@@ -35,7 +35,7 @@ public class ReclamationServiceImpl implements ReclamationService {
             pst.setString(2, r.getDetailReclamation());
             // pst.setDouble(3, r.getUtilisateur().getIdUtilisateur());
 
-            pst.setString(3, r.getUrl());
+           // pst.setString(3, r.getUrl());
 
             pst.executeUpdate();
 
@@ -70,7 +70,7 @@ public class ReclamationServiceImpl implements ReclamationService {
             pst.setString(1, r.getType());
             pst.setString(2, r.getDetailReclamation());
             // pst.setDouble(3, r.getUtilisateur().getIdUtilisateur());
-            pst.setString(3, r.getUrl());
+           // pst.setString(3, r.getUrl());
             pst.setDouble(4, r.getIdReclamation());
 
             pst.executeUpdate();

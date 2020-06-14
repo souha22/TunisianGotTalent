@@ -19,7 +19,7 @@ public class Spectateur extends Utilisateur{
         super();
     }
 
-    public Spectateur(Date DateNaissance, Double id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+    public Spectateur(Date DateNaissance, int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
         super(id, nom, prenom, cin, mail, adresse, tel, sexe, password, type);
         this.DateNaissance = DateNaissance;
     }
