@@ -11,13 +11,17 @@ public class Evenement  {
 
 	// Fields
 
-	private Double idEv;
+	private int idEv;
 	private String libelle;
 	private String lieu;
 	private Date dateDebut;
 	private Date dateFin;
-	private Double idOrganisateur;
-	private Set<Utilisateur> utilisateurs = new HashSet<Utilisateur>(0);
+	private int idOrganisateur;
+	private Set<Spectateur> Spectateur = new HashSet<Spectateur>(0);
+        private Set<Candidat> Candidat = new Hashset<Candidat> (0);
+        private Set<Jury> Jury = new Hashset <Jury> (0);
+        
+        
 
 	// Constructors
 
@@ -26,14 +30,14 @@ public class Evenement  {
 	}
 
 	/** minimal constructor */
-	public Evenement(Double idEv, String libelle, String lieu,
+	public Evenement(int idEv, String libelle, String lieu,
 			Date dateDebut, Date dateFin, Double idOrganisateur) {
 		this.idEv = idEv;
 		this.libelle = libelle;
 		this.lieu = lieu;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
-		this.idOrganisateur = idOrganisateur;
+		
 	}
 
 	/** full constructor */
@@ -45,8 +49,9 @@ public class Evenement  {
 		this.lieu = lieu;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
-		this.idOrganisateur = idOrganisateur;
-		this.utilisateurs = utilisateurs;
+		this.Jury= Jury;
+                this.Candidat = Candidat;
+                this.Spectateur = Spectateur;
 	}
 
 	// Property accessors

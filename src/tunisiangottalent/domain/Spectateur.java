@@ -7,8 +7,8 @@ package tunisiangottalent.domain;
 
 /**
  *
- * @author souha.jarraya
+ * @author KA
  */
-public class candidiat {
+public class Spectateur {
     
 }
