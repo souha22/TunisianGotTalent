@@ -2,7 +2,7 @@ package tunisiangottalent.domain;
 
 
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,12 +10,12 @@ import java.util.Set;
 public class Fichier implements java.io.Serializable {
 
 	// Fields
-        private String test;
-	private Double idFichier;
-	private Utilisateur utilisateur;
-	private String taille;
+       
+	private int idFichier;
+        private String url;
 	private String type;
 	private Date date;
+        private Candidat idcandidat;
 	private Set<Vote> votes = new HashSet<Vote>(0);
 
 	// Constructors
@@ -25,52 +25,48 @@ public class Fichier implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Fichier(Double idFichier, Utilisateur utilisateur, String taille,
-			String type, Date date) {
-		this.idFichier = idFichier;
-		this.utilisateur = utilisateur;
-		this.taille = taille;
-		this.type = type;
-		this.date = date;
-	}
-
-	/** full constructor */
-	public Fichier(Double idFichier, Utilisateur utilisateur, String taille,
-			String type, Date date, Set<Vote> votes) {
-		this.idFichier = idFichier;
-		this.utilisateur = utilisateur;
-		this.taille = taille;
-		this.type = type;
-		this.date = date;
-		this.votes = votes;
-	}
-
 	
-	public Double getIdFichier() {
-		return this.idFichier;
+	public Fichier(int idFichier, String url, String type, Date date, Candidat idcandidat) {
+        this.idFichier = idFichier;
+        this.url = url;
+        this.type = type;
+        this.date = date;
+        this.idcandidat = idcandidat;
 	}
 
-	public void setIdFichier(Double idFichier) {
-		this.idFichier = idFichier;
-	}
+    public Fichier(String url, String type, Date date, Candidat idcandidat) {
+        this.url = url;
+        this.type = type;
+        this.date = date;
+        this.idcandidat = idcandidat;
+        
+    }
 
-	
-	public Utilisateur getUtilisateur() {
-		return this.utilisateur;
-	}
+    public int getIdFichier() {
+        return idFichier;
+    }
 
-	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
-	}
+    public void setIdFichier(int idFichier) {
+        this.idFichier = idFichier;
+    }
 
-	
-	public String getTaille() {
-		return this.taille;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public void setTaille(String taille) {
-		this.taille = taille;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Candidat getIdcandidat() {
+        return idcandidat;
+    }
+
+    public void setIdcandidat(Candidat idcandidat) {
+        this.idcandidat = idcandidat;
+    }
+        
+        
 
 
 	public String getType() {

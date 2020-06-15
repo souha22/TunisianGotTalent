@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tunisiangottalent.domain;
+package tunisiangottalent.service;
 
 /**
  *
  * @author souha.jarraya
  */
-public class candidiat {
+public class test {
     
 }
