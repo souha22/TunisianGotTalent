@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.SplashFXMLController">
+    <children>
+        <ImageView fitHeight="666.0" fitWidth="1343.0" pickOnBounds="true" smooth="false" StackPane.alignment="CENTER">
+         <image>
+            <Image url="@ezgif.com-gif-maker.gif" />
+         </image>
+        </ImageView>
+        <Pane opacity="0.45" prefHeight="848.0" prefWidth="1360.0">
+         <children>
+              <Text fill="WHITE" layoutX="155.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tunisian" wrappingWidth="966.67138671875">
+                  <font>
+                      <Font name="Monotype Corsiva" size="96.0" />
+                  </font>
+              </Text>
+            <Text fill="#eee5e5" layoutX="574.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Got ">
+               <font>
+                  <Font name="Monotype Corsiva" size="96.0" />
+               </font>
+            </Text>
+            <Text fill="#eee5e5" layoutX="1035.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Talent">
+               <font>
+                  <Font name="Monotype Corsiva" size="96.0" />
+               </font>
+            </Text>
+         </children></Pane>
+    </children>
+</StackPane>

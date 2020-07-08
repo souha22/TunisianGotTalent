@@ -47,6 +47,17 @@ public class Utilisateur {
         this.type = type;
     }
 
+    public Utilisateur(String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.cin = cin;
+        this.mail = mail;
+        this.adresse = adresse;
+        this.tel = tel;
+        this.sexe = sexe;
+        this.password = password;
+    }
+
     
     
     
@@ -134,9 +145,6 @@ public class Utilisateur {
     @Override
     public String toString() {
         return "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", mail=" + mail + ", adresse=" + adresse + ", tel=" + tel + ", sexe=" + sexe + ", password=" + password + ", type=" + type;
-    }
+    }  
 
-    
-
-   
 }

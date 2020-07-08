@@ -15,22 +15,24 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tunisiangottalent.domain.Fichier;
-import utils.DataSource;
+import tunisiangottalent.util.DataSource;
 
 /**
  *
  * @author admin
  */
-public class FichierService{
+public class FichierService implements IService<Fichier>{
         
           private Connection conn;
           private Statement ste;
+          private PreparedStatement pste;
 
     public FichierService() throws ClassNotFoundException {
         conn=DataSource.getInstance().getCnx();
     }
 
-    public void Ajouter(Fichier f) throws SQLException {
+    @Override
+    public void insert(Fichier f) {
                String request = "INSERT INTO fichier (`url`,`type`,`date`,`id_candidat`) VALUES (?,?,?,?)";
        
         try{
@@ -39,7 +41,7 @@ public class FichierService{
        ps.setString(1,f.getUrl());
        ps.setString(2,f.getType());
        ps.setDate(3,f.getDate());
-       ps.setInt(4,f.getIdcandidat().getId());
+       // ps.setInt(4,f.getIdcandidat().getId());
 
        ps.executeUpdate();
         } catch (SQLException ex){
@@ -51,44 +53,52 @@ public class FichierService{
     }
 
   
-//    public void Supprimer(Object o) {
-//       String req = "delete from randonnee where id_randonnee=" + r.getIdRandonnee();
-//        Randonnee ra = displayById(r.getIdRandonnee());
-//
-//        if (ra != null) {
-//            try {
-//
-//                st.executeUpdate(req);
-//
-//            } catch (SQLException ex) {
-//                Logger.getLogger(RandonneeService.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//        } else {
-//            System.out.println("n'existe pas");
-//        }   
-//    }
- 
-    public List Afficher() {
+    @Override
+    public void delete(Fichier f) {
+            String sql = "delete from evenement where id_ev ="+ f.getIdFichier();
+          if (f != null) {
+            try {
+
+                ste = conn.createStatement();
+                ste.executeUpdate(sql);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(EvennementService.class.getName()).log(Level.SEVERE, null, ex);
+            }
+       
+    }
+    }
+    @Override
+    public void Update(Fichier f) {
+
+        int z = 0;
+        String sql = ""
+                + "update fuchier set url = ? , type = ?, date=?"
+                + "where id_fichier= ?";
+        try {
+            pste = conn.prepareStatement(sql);
+            pste.setString(1,f.getUrl());
+            pste.setString(2,f.getType());
+            pste.setDate(3,f.getDate());
+             pste.setDate(3,f.getDate());
+            z = pste.executeUpdate();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+           e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public List<Fichier> displayAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-  
-    public Object AfficherparId(int id) {
-              return null;
-        
-       
+    @Override
+    public Fichier displayById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
    
-    public boolean Modifier(Object os) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-    public void Ajouter(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-
-    
+  
 }

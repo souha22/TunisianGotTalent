@@ -6,8 +6,8 @@
 package tunisiangottalent.domain;
 
 import tunisiangottalent.domain.Utilisateur;
-import java.util.Date;
-
+import java.sql.Date;
+import java.time.LocalDate;
 /**
  *
  * @author KA
@@ -19,20 +19,21 @@ public class Spectateur extends Utilisateur{
         super();
     }
 
-    public Spectateur(Date DateNaissance, int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+    public Spectateur(int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type,Date DateNaissanc) {
         super(id, nom, prenom, cin, mail, adresse, tel, sexe, password, type);
         this.DateNaissance = DateNaissance;
     }
 
-    public Spectateur(Date DateNaissance, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+    public Spectateur(String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type,Date DateNaissance) {
         super(nom, prenom, cin, mail, adresse, tel, sexe, password, type);
         this.DateNaissance = DateNaissance;
     }
 
+    public Spectateur(String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password,Date DateNaissance) {
+        super(nom, prenom, cin, mail, adresse, tel, sexe, password);
+        this.DateNaissance = DateNaissance;
+    }
     
-
-    
-
     public Date getDateNaissance() {
         return DateNaissance;
     }
@@ -43,7 +44,7 @@ public class Spectateur extends Utilisateur{
     
       @Override
     public String toString() {
-        return "Spectateur " + super.toString() + "Date de naissance  : " + DateNaissance;
+        return "Spectateur : " + super.toString() + " Date de naissance  : " + DateNaissance;
     
     }
 }

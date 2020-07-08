@@ -5,9 +5,10 @@
  */
 package tunisiangottalent.domain;
 
-import tunisiangottalent.domain.Utilisateur;
+
 import java.util.Calendar;
-import java.util.Date;
+import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -22,25 +23,29 @@ public class Candidat extends Utilisateur{
         super();
     }
 
-    public Candidat(Date dateNaissance, String talent, int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+    public Candidat(String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password,Date dateNaissance, String talent) {
+        super(nom, prenom, cin, mail, adresse, tel, sexe, password);
+        this.dateNaissance = dateNaissance;
+        this.talent = talent;
+    }
+
+    public Candidat(int id, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type,Date dateNaissance, String talent) {
         super(id, nom, prenom, cin, mail, adresse, tel, sexe, password, type);
         this.dateNaissance = dateNaissance;
         this.talent = talent;
     }
 
-    public Candidat(Date dateNaissance, String talent, String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type) {
+    public Candidat(String nom, String prenom, String cin, String mail, String adresse, String tel, String sexe, String password, String type,Date dateNaissance, String talent) {
         super(nom, prenom, cin, mail, adresse, tel, sexe, password, type);
         this.dateNaissance = dateNaissance;
         this.talent = talent;
     }
 
-   
-    
-
     public Date getDateNaissance() {
         return dateNaissance;
     }
 
+   
     public void setDateNaissance(Date dateNaissance) {
         this.dateNaissance = dateNaissance;
     }

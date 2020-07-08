@@ -9,12 +9,11 @@ public class Reclamation implements java.io.Serializable {
 
 	// Fields
 
-	private Double idReclamation;
+	private int idReclamation;
 	private Utilisateur utilisateur;
 	private String type;
 	private String detailReclamation;
         //url
-
 	// Constructors
 
 	/** default constructor */
@@ -22,7 +21,7 @@ public class Reclamation implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Reclamation(Double idReclamation, Utilisateur utilisateur,
+	public Reclamation(int idReclamation, Utilisateur utilisateur,
 			String type, String detailReclamation) {
 		this.idReclamation = idReclamation;
 		this.utilisateur = utilisateur;
@@ -36,11 +35,11 @@ public class Reclamation implements java.io.Serializable {
 
 	// Property accessors
 	
-	public Double getIdReclamation() {
+	public int getIdReclamation() {
 		return this.idReclamation;
 	}
 
-	public void setIdReclamation(Double idReclamation) {
+	public void setIdReclamation(int idReclamation) {
 		this.idReclamation = idReclamation;
 	}
 

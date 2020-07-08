@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane prefHeight="670.0" prefWidth="1360.0" stylesheets="@themeRANDO.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.MainController">
+    <center>
+        <TabPane>
+            <tabs>
+                <Tab closable="false" text="Home">
+                    <content>
+                        <BorderPane>
+                            <center>
+                                <VBox prefHeight="600.0" prefWidth="900.0">
+                                    <children>
+                                        <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+                                            <items>
+                                                <AnchorPane prefHeight="568.0" prefWidth="1200.0">
+                                                    <children>
+                                                        <SplitPane dividerPositions="0.5" layoutX="173.0" orientation="VERTICAL" prefHeight="573.0" prefWidth="725.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <items>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                                    <children>
+                                                                        <SplitPane dividerPositions="0.47434119278779474" layoutX="184.0" layoutY="55.0" prefHeight="314.0" prefWidth="1356.0" AnchorPane.bottomAnchor="-34.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <items>
+                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="313.0">
+                                                                                    <children>
+                                                                                        <TableView id="tablerandonnee" fx:id="tablerandonnee" fixedCellSize="0.0" layoutX="-3.0" layoutY="14.0" onMouseClicked="#AffichageCommentaires" onMousePressed="#AffichageCommentaires" prefHeight="278.0" prefWidth="560.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                            <columns>
+                                                                                                <TableColumn fx:id="colonneTitre" minWidth="100.0" prefWidth="120.240234375" text="Titre" />
+                                                                                            </columns>
+                                                                                            <columnResizePolicy>
+                                                                              
+                                                                                            </columnResizePolicy>
+                                                                                        </TableView>
+                                                                                    </children>
+                                                                                </AnchorPane>
+                                                                                <SplitPane>
+                                                                                    <items>
+                                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="426.0">
+                                                                                            <opaqueInsets>
+                                                                                                <Insets />
+                                                                                            </opaqueInsets>
+                                                                                            <children>
+                                                                                                <GridPane fx:id="table" layoutX="-1.0" layoutY="7.0" prefHeight="277.0" prefWidth="709.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                                    <columnConstraints>
+                                                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="109.0" />
+                                                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="446.0" />
+                                                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="154.0" />
+                                                                                                    </columnConstraints>
+                                                                                                    <rowConstraints>
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                    </rowConstraints>
+                                                                                                    <children>
+                                                                                                        <Label text="ID Randonnee :" textFill="#0099b6" />
+                                                                                                        <Label text="Titre :" textFill="#0099b6" GridPane.rowIndex="1" />
+                                                                                                        <Label text="Description :" textFill="#0099b6" GridPane.rowIndex="2" />
+                                                                                                        <Label text="Date de Depart :" textFill="#0099b6" GridPane.rowIndex="3" />
+                                                                                                        <Label text="Date d'Arrivee :" textFill="#0099b6" GridPane.rowIndex="4" />
+                                                                                                        <Label text="Lieu Depart :" textFill="#0099b6" GridPane.rowIndex="5" />
+                                                                                                        <Label text="Lieu d'arrivee :" textFill="#0099b6" GridPane.rowIndex="6" />
+                                                                                                        <Label text="Createur :" textFill="#0099b6" GridPane.rowIndex="7" />
+                                                                                                        <Label prefHeight="19.0" prefWidth="103.0" text="Nombre de Places:" textFill="#0099b6" GridPane.rowIndex="8" />
+                                                                                                        <Label fx:id="lbIdRandonnee" prefHeight="17.0" prefWidth="0.0" GridPane.columnIndex="1" />
+                                                                                                        <Label fx:id="lbTitre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                                                        <Label fx:id="lbDescription" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                                                        <Label fx:id="lbDateDepart" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                                                        <Label fx:id="lbDateArrivee" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                                                        <Label fx:id="lbLieuDepart" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                                                        <Label fx:id="lbLieuArrivee" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                                                        <Label fx:id="lbIdRandonneur" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                                                        <Label fx:id="lbStatus" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                                                                        <JFXButton fx:id="btn_media" onAction="#ViewMedia" prefHeight="46.0" prefWidth="172.0" text="Media" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                                                                        <JFXButton fx:id="btn_participer" onAction="#ParticiperAction" prefHeight="46.0" prefWidth="172.0" text="Participer" GridPane.columnIndex="2" />
+                                                                                                        <JFXButton fx:id="btn_noter" onAction="#Noteme" prefHeight="46.0" prefWidth="172.0" text="Noter" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                              <JFXButton fx:id="btnCommenter" onAction="#AjouterCommentaire" prefHeight="46.0" prefWidth="172.0" text="Commenter" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                                                    </children>
+                                                                                                </GridPane>
+                                                                                            </children>
+                                                                                        </AnchorPane>
+                                                                                    </items>
+                                                                                </SplitPane>
+                                                                            </items>
+                                                                        </SplitPane>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                                    <children>
+                                                                        <SplitPane dividerPositions="0.5742024965325936" layoutX="173.0" layoutY="37.0" prefHeight="245.0" prefWidth="723.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <items>
+                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                                                    <children>
+                                                                                        <TableView fx:id="tableCommentaires" prefHeight="280.0" prefWidth="358.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                            <columns>
+                                                                                                <TableColumn fx:id="ColonneIdRandonneur" prefWidth="163.0" text="Randonneur" visible="false" />
+                                                                                                <TableColumn fx:id="ColonneCommentaire" prefWidth="194.0" text="Commentaire" />
+                                                                                            </columns>
+                                                                                            <columnResizePolicy>
+                                                     
+                                                                                            </columnResizePolicy>
+                                                                                        </TableView>
+                                                                                    </children>
+                                                                                </AnchorPane>
+                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                                                    <children>
+                                                                                        <WebView fx:id="WebViewMap" layoutX="-2.0" layoutY="-1.0" minHeight="-1.0" minWidth="-Infinity" onMouseEntered="#ShowMap" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                                    </children>
+                                                                                </AnchorPane>
+                                                                            </items>
+                                                                        </SplitPane>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </items>
+                                                        </SplitPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </VBox>
+                            </center>
+                            <top>
+                                <HBox BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Region HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                            </top>
+                        </BorderPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="mes_infos" closable="false" text="Mes Infos">
+                    <content>
+                        <BorderPane prefHeight="601.0" prefWidth="900.0">
+                            <top>
+                                <VBox fillWidth="false" BorderPane.alignment="CENTER" />
+                            </top>
+                            <center>
+                                <Group BorderPane.alignment="CENTER">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="450.0" prefWidth="276.0" spacing="15.0">
+                                            <children>
+                                                <JFXTextField fx:id="NomRandonneurArea" focusColor="#0099b6" prefHeight="33.0" prefWidth="137.0" promptText="Nom Randonneur" unFocusColor="#0099b6" />
+                                                <JFXTextField fx:id="PrenomRandonneurArea" focusColor="#0099b6" promptText="Prenom Randonneur" unFocusColor="#0099b6" />
+                                                <JFXDatePicker fx:id="date_naissance" defaultColor="#0099b6" prefHeight="28.0" prefWidth="276.0" promptText="Date de Naissance" />
+                                                <JFXTextField fx:id="emailArea" focusColor="#0099b6" promptText="E-Mail" unFocusColor="#0099b6" />
+                                                <JFXButton fx:id="btn_modifier_infos" onAction="#ValiderModifInfos" ripplerFill="#0099b6" text="Valider">
+                                                    <VBox.margin>
+                                                        <Insets />
+                                                    </VBox.margin>
+                                                </JFXButton>
+                                    
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="70.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </Group>
+                            </center>
+                        </BorderPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabMesRandonnees" closable="false" text="Mes Randonnees">
+                    <content>
+                        <VBox>
+                            <children>
+                                <AnchorPane>
+                                    <children>
+                                        <GridPane fx:id="table1" alignment="TOP_RIGHT" layoutX="449.0" layoutY="26.0" prefHeight="503.0" prefWidth="886.0" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="449.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="26.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="152.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="609.0" minWidth="10.0" prefWidth="531.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="202.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="244.0" text="ID Randonnee :" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="245.0" text="Titre :" GridPane.rowIndex="1" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="243.0" text="Description :" GridPane.rowIndex="2" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="243.0" text="Date de Depart :" GridPane.rowIndex="3" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="242.0" text="Date d'Arrivee :" GridPane.rowIndex="4" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="244.0" text="Lieu Depart :" GridPane.rowIndex="5" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="243.0" text="Lieu d'arrivee :" GridPane.rowIndex="6" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="244.0" text="Nombre de places:" GridPane.rowIndex="7" />
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="242.0" text="Note" GridPane.rowIndex="8" />
+                                                <Label fx:id="lbIdRandonnee1" prefHeight="17.0" prefWidth="0.0" GridPane.columnIndex="1" />
+                                                <Label fx:id="lbTitre1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="lbDescription1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="lbDateDepart1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label fx:id="lbDateArrivee1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label fx:id="lbLieuDepart1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label fx:id="lbLieuArrivee1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label fx:id="lbIdRandonneur1" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <Label fx:id="lbStatus1" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <JFXTextField fx:id="txtIdRandonnee" focusColor="#0099b6" unFocusColor="#0099b6" GridPane.columnIndex="1" />
+                                                <JFXTextField fx:id="txtTitre" focusColor="#0099b6" unFocusColor="#0099b6" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <JFXTextArea fx:id="txtDescription" focusColor="#0099b6" prefHeight="28.0" prefWidth="312.0" unFocusColor="#0099b6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <JFXTextField fx:id="txtDepart" focusColor="#0099b6" unFocusColor="#0099b6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <JFXTextField fx:id="txtNbePlaces" focusColor="#0099b6" unFocusColor="#0099b6" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <JFXTextField fx:id="txtNote" focusColor="#0099b6" unFocusColor="#0099b6" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <JFXDatePicker fx:id="datePickerDepart" defaultColor="#0099b6" prefHeight="28.0" prefWidth="598.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <JFXDatePicker fx:id="datePickerArrivee" defaultColor="#0099b6" prefHeight="28.0" prefWidth="596.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <JFXTextField fx:id="txtLieuArrivee" focusColor="#0099b6" unFocusColor="#0099b6" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <JFXButton fx:id="btn_ajouter_randonnee" alignment="CENTER" onAction="#AjouterRandonnee" prefHeight="32.0" prefWidth="172.0" ripplerFill="#0099b6" stylesheets="@themeRANDO.css" text="Ajouter Randonnee" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" GridPane.columnIndex="2">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin></JFXButton>
+                                                <JFXButton fx:id="btn_valider_modif" prefHeight="42.0" prefWidth="172.0" ripplerFill="#0099b6" stylesheets="@themeRANDO.css" text="Valider Modification" textOverrun="CENTER_ELLIPSIS" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin></JFXButton>
+                                            </children>
+                                        </GridPane>
+                                        <TableView fx:id="tableMesRandonnees" layoutX="8.0" layoutY="20.0" prefHeight="686.0" prefWidth="432.0" stylesheets="@themeRANDO.css">
+                                            <columns>
+                                                <TableColumn fx:id="colonneMesRandonnee" prefWidth="132.0" text="Mes Randonnees" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="me_participation" closable="false" text="Mes Participations">
+                    <content>
+                        <BorderPane prefHeight="598.0" prefWidth="1174.0">
+                            <center>
+                                <SplitPane dividerPositions="0.29797979797979796" prefHeight="678.0" prefWidth="1368.0" BorderPane.alignment="CENTER">
+                                    <items>
+                                        <TableView fx:id="mes_participation_randonnee" prefHeight="596.0" prefWidth="346.0">
+                                            <columns>
+                                                <TableColumn fx:id="colone_mes_participation" prefWidth="203.0" text="Randonnees" />
+                                            </columns>
+                                        </TableView>
+                                        <GridPane prefHeight="661.0" prefWidth="790.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="296.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="627.0" minWidth="10.0" prefWidth="524.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Id Randonnee:" textFill="#0099b6" />
+                                                <Label text="Titre:" textFill="#0099b6" GridPane.rowIndex="1" />
+                                                <Label text="Description:" textFill="#0099b6" GridPane.rowIndex="2" />
+                                                <Label text="Date Depart" textFill="#0099b6" GridPane.rowIndex="3" />
+                                                <Label text="Date Arrivee:" textFill="#0099b6" GridPane.rowIndex="4" />
+                                                <Label text="Lieu Depart:" textFill="#0099b6" GridPane.rowIndex="5" />
+                                                <Label text="Lieu Arrivee:" textFill="#0099b6" GridPane.rowIndex="6" />
+                                                <Label text="Nombre de Participants:" textFill="#0099b6" GridPane.rowIndex="7" />
+                                                <Label text="Note:" textFill="#0099b6" GridPane.rowIndex="8" />
+                                                <Label fx:id="lblIdrandonnee" GridPane.columnIndex="1" />
+                                                <Label fx:id="lblTitre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="lblDescription" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="lblDateDepart" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label fx:id="lblDateArrivee" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label fx:id="lblLieuDepart" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label fx:id="lblLieuArrivee" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label fx:id="lblNbrParticipants" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <Label fx:id="lblNote" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                            </children>
+                                        </GridPane>
+                                    </items>
+                                </SplitPane>
+                            </center>
+                        </BorderPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    <top>
+        <JFXButton fx:id="btn_logout" stylesheets="@themeRANDO.css" text="Log Out" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets right="25.0" top="30.0" />
+         </BorderPane.margin></JFXButton>
+    </top>
+</BorderPane>
