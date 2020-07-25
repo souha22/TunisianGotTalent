@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import javafx.scene.*?>
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -22,8 +15,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="670.0" prefWidth="1360.0" stylesheets="@themeTGT.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.LoginController">
+<AnchorPane fx:id="root" prefHeight="670.0" prefWidth="1360.0" stylesheets="@themeTGT.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.LoginController">
    <children>
       <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -45,6 +39,16 @@
                                              <effect>
                                                 <Glow />
                                              </effect></ImageView>
+                                          <Label fx:id="passwordWarning" text="Password must not be empty" textFill="RED">
+                                             <font>
+                                                <Font name="Open Sans Regular" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="usernameWarning" text="Username must not be empty" textFill="RED">
+                                             <font>
+                                                <Font name="Open Sans Regular" size="10.0" />
+                                             </font>
+                                          </Label>
                                                       <JFXTextField fx:id="loginUser" focusColor="#b51900" prefHeight="25.0" prefWidth="292.0" promptText="Login" unFocusColor="#b51900" VBox.vgrow="ALWAYS" />
                                                       <JFXPasswordField fx:id="passwordUser" focusColor="#b51900" prefHeight="25.0" prefWidth="288.0" promptText="Password" unFocusColor="#b51900" />
                                           <HBox spacing="15.0">

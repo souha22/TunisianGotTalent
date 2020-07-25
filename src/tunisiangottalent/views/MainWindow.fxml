@@ -22,7 +22,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.web.WebView?>
 
-<BorderPane prefHeight="670.0" prefWidth="1360.0" stylesheets="@themeRANDO.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.MainController">
+<BorderPane prefHeight="670.0" prefWidth="1360.0" stylesheets="@themeRANDO.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.MainController">
     <center>
         <TabPane>
             <tabs>
@@ -120,7 +120,7 @@
                                                                                         <TableView fx:id="tableCommentaires" prefHeight="280.0" prefWidth="358.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                                             <columns>
                                                                                                 <TableColumn fx:id="ColonneIdRandonneur" prefWidth="163.0" text="Randonneur" visible="false" />
-                                                                                                <TableColumn fx:id="ColonneCommentaire" prefWidth="194.0" text="Commentaire" />
+                                                                                                <TableColumn fx:id="ColonneCommentaire" prefWidth="194.0" text="recamation " />
                                                                                             </columns>
                                                                                             <columnResizePolicy>
                                                      
@@ -130,7 +130,7 @@
                                                                                 </AnchorPane>
                                                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                                                                     <children>
-                                                                                        <WebView fx:id="WebViewMap" layoutX="-2.0" layoutY="-1.0" minHeight="-1.0" minWidth="-Infinity" onMouseEntered="#ShowMap" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                                        <WebView fx:id="WebViewMap" layoutY="-14.0" minHeight="-1.0" minWidth="-Infinity" onMouseEntered="#ShowMap" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-14.0" />
                                                                                     </children>
                                                                                 </AnchorPane>
                                                                             </items>
@@ -165,9 +165,11 @@
                             <center>
                                 <Group BorderPane.alignment="CENTER">
                                     <children>
-                                        <VBox alignment="CENTER" prefHeight="450.0" prefWidth="276.0" spacing="15.0">
+                                        <VBox alignment="CENTER" layoutY="-28.0" prefHeight="555.0" prefWidth="282.0" spacing="15.0">
                                             <children>
-                                                <JFXTextField fx:id="NomRandonneurArea" focusColor="#0099b6" prefHeight="33.0" prefWidth="137.0" promptText="Nom Randonneur" unFocusColor="#0099b6" />
+                                    <JFXTextField fx:id="emailArea1" focusColor="#0099b6" layoutX="15.0" layoutY="382.0" promptText="E-Mail" unFocusColor="#0099b6" />
+                                    <JFXTextField fx:id="NomRandonneurArea1" alignment="BASELINE_RIGHT" focusColor="#0099b6" layoutX="15.0" layoutY="200.0" prefHeight="33.0" prefWidth="137.0" promptText="Nom" unFocusColor="#0099b6" />
+                                                <JFXTextField fx:id="NomRandonneurArea" alignment="BASELINE_RIGHT" focusColor="#0099b6" prefHeight="33.0" prefWidth="137.0" promptText="Nom" unFocusColor="#0099b6" />
                                                 <JFXTextField fx:id="PrenomRandonneurArea" focusColor="#0099b6" promptText="Prenom Randonneur" unFocusColor="#0099b6" />
                                                 <JFXDatePicker fx:id="date_naissance" defaultColor="#0099b6" prefHeight="28.0" prefWidth="276.0" promptText="Date de Naissance" />
                                                 <JFXTextField fx:id="emailArea" focusColor="#0099b6" promptText="E-Mail" unFocusColor="#0099b6" />
@@ -185,10 +187,26 @@
                                     </children>
                                 </Group>
                             </center>
+                     <left>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="563.0" prefWidth="1346.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TabPane layoutY="14.0" prefHeight="200.0" prefWidth="1332.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Untitled Tab 1" />
+                                  <Tab text="Untitled Tab 2">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </left>
                         </BorderPane>
                     </content>
                 </Tab>
-                <Tab fx:id="tabMesRandonnees" closable="false" text="Mes Randonnees">
+                <Tab fx:id="tabMesRandonnees" closable="false" text="Mes envenement">
                     <content>
                         <VBox>
                             <children>
@@ -263,7 +281,7 @@
                         </VBox>
                     </content>
                 </Tab>
-                <Tab fx:id="me_participation" closable="false" text="Mes Participations">
+                <Tab fx:id="me_participation" closable="false" text="Mes Seances">
                     <content>
                         <BorderPane prefHeight="598.0" prefWidth="1174.0">
                             <center>

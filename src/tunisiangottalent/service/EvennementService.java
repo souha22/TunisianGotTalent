@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -70,7 +72,6 @@ public class EvennementService implements IService<Evenement>{
     String sql = "delete from evenement where id_ev ="+ e.getIdEv();
           if (e != null) {
             try {
-
                 ste = conn.createStatement();
                 ste.executeUpdate(sql);
 

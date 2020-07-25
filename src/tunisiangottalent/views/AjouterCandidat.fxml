@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunisiangottalent.controllers.AjouterCandidatController">
+   <top>
+      <VBox BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox alignment="CENTER" fillWidth="false" minHeight="-Infinity" prefHeight="368.0" prefWidth="640.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="txtn" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Nom" unFocusColor="#b51900" VBox.vgrow="ALWAYS" />
+            <JFXTextField fx:id="txtp" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Prénom" unFocusColor="#b51900" />
+            <JFXDatePicker fx:id="dp" defaultColor="#b51900" prefHeight="25.0" prefWidth="290.0" promptText="Date de Naissance" />
+            <JFXTextField fx:id="txtm" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Adresse Email" unFocusColor="#b51900" />
+            <JFXTextField fx:id="txtpass" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Mot de Passe" unFocusColor="#b51900" />
+            <JFXTextField fx:id="txtc" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="C.I.N" unFocusColor="#b51900" />
+            <JFXTextField fx:id="txttel" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Telephone" unFocusColor="#b51900" />
+            <JFXTextField fx:id="txtad" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Adresse" unFocusColor="#b51900" />
+            <JFXTextField fx:id="taxttal" focusColor="#b51900" prefHeight="25.0" prefWidth="289.0" promptText="Talent" unFocusColor="#b51900" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="640.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <JFXButton fx:id="btn_valider" prefHeight="25.0" prefWidth="104.0" text="Valider" textFill="#39b874" />
+                  <JFXButton fx:id="btn_annuler" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="100.0" text="Annuler" textFill="#39b874" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
